@@ -102,7 +102,6 @@ class Node implements Comparable<Node> {
 
     @Override
     public int compareTo(Node o) {
-        // TODO Auto-generated method stub
         // 表示从小到大排序
         return this.value - o.value;
     }
