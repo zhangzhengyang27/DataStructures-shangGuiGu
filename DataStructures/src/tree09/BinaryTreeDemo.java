@@ -52,7 +52,7 @@ class BinaryTree {
         this.root = root;
     }
 
-    //删除结点
+    //调用删除结点
     public void delNode(int no) {
         if (root != null) {
             //如果只有一个root结点, 这里立即判断root是不是就是要删除结点
@@ -67,7 +67,7 @@ class BinaryTree {
         }
     }
 
-    //前序遍历
+    //调用前序遍历
     public void preOrder() {
         if (this.root != null) {
             this.root.preOrder();
@@ -76,7 +76,7 @@ class BinaryTree {
         }
     }
 
-    //中序遍历
+    //调用中序遍历
     public void infixOrder() {
         if (this.root != null) {
             this.root.infixOrder();
@@ -85,7 +85,7 @@ class BinaryTree {
         }
     }
 
-    //后序遍历
+    //调用后序遍历
     public void postOrder() {
         if (this.root != null) {
             this.root.postOrder();
@@ -94,7 +94,7 @@ class BinaryTree {
         }
     }
 
-    //前序遍历
+    //调用前序遍历
     public HeroNode preOrderSearch(int no) {
         if (root != null) {
             return root.preOrderSearch(no);
@@ -103,7 +103,7 @@ class BinaryTree {
         }
     }
 
-    //中序遍历
+    //调用中序遍历
     public HeroNode infixOrderSearch(int no) {
         if (root != null) {
             return root.infixOrderSearch(no);
@@ -112,7 +112,7 @@ class BinaryTree {
         }
     }
 
-    //后序遍历
+    //调用后序遍历
     public HeroNode postOrderSearch(int no) {
         if (root != null) {
             return this.root.postOrderSearch(no);
@@ -177,14 +177,14 @@ class HeroNode {
     public void delNode(int no) {
 
         //思路
-		/*
-		 * 	1. 因为我们的二叉树是单向的，所以我们是判断当前结点的子结点是否需要删除结点，而不能去判断当前这个结点是不是需要删除结点.
-			2. 如果当前结点的左子结点不为空，并且左子结点 就是要删除结点，就将this.left = null; 并且就返回(结束递归删除)
-			3. 如果当前结点的右子结点不为空，并且右子结点 就是要删除结点，就将this.right= null ;并且就返回(结束递归删除)
-			4. 如果第2和第3步没有删除结点，那么我们就需要向左子树进行递归删除
-			5. 如果第4步也没有删除结点，则应当向右子树进行递归删除.
+      /*
+       * 1. 因为我们的二叉树是单向的，所以我们是判断当前结点的子结点是否需要删除结点，而不能去判断当前这个结点是不是需要删除结点.
+         2. 如果当前结点的左子结点不为空，并且左子结点 就是要删除结点，就将this.left = null; 并且就返回(结束递归删除)
+         3. 如果当前结点的右子结点不为空，并且右子结点 就是要删除结点，就将this.right= null ;并且就返回(结束递归删除)
+         4. 如果第2和第3步没有删除结点，那么我们就需要向左子树进行递归删除
+         5. 如果第4步也没有删除结点，则应当向右子树进行递归删除.
 
-		 */
+       */
 
         //2. 如果当前结点的左子结点不为空，并且左子结点 就是要删除结点，就将this.left = null; 并且就返回(结束递归删除)
         if (this.left != null && this.left.no == no) {
