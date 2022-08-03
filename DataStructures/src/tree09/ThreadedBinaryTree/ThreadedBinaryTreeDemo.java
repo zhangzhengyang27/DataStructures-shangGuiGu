@@ -21,6 +21,7 @@ public class ThreadedBinaryTreeDemo {
         //测试中序线索化
         ThreadedBinaryTree threadedBinaryTree = new ThreadedBinaryTree();
         threadedBinaryTree.setRoot(root);
+        // 线索化二叉树
         threadedBinaryTree.threadedNodes();
 
         //测试: 以10号节点测试
